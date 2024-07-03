@@ -10,7 +10,7 @@ public class SimpleDate {
         this.month = month;
         this.year = year;
     }
-
+    
     @Override
     public String toString() {
         return this.day + "." + this.month + "." + this.year;
@@ -49,6 +49,25 @@ public class SimpleDate {
         }
 
         return this.year - other.year - yearRemoved;
+    }
+    
+    public boolean equals(Object comparedObject){
+        if(this == comparedObject){
+            return true;
+        }
+        
+        if(!(comparedObject instanceof SimpleDate)){
+            return false;
+        }
+        
+        SimpleDate comparedDate = (SimpleDate) comparedObject;
+        
+        if((this.day == comparedDate.day)
+                && this.month == comparedDate.month
+                && this.year == comparedDate.year){
+            return true;
+        }
+        return false;
     }
 
 }
