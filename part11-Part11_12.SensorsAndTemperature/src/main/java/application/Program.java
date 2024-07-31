@@ -3,7 +3,6 @@ package application;
 public class Program {
 
     public static void main(String[] args) {
-        // you can test your classes here:
         Sensor kumpula = new TemperatureSensor();
         kumpula.setOn();
         System.out.println("temperature in Kumpula " + kumpula.read() + " degrees Celsius");
@@ -19,4 +18,5 @@ public class Program {
         helsinkiRegion.setOn();
         System.out.println("temperature in Helsinki region " + helsinkiRegion.read() + " degrees Celsius");
     }
+
 }
